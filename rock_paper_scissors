@@ -1,0 +1,25 @@
+import random
+possibilities=["rock","paper","scissors"]
+computer_choice=random.choice(possibilities)
+player_choice=input("Rock,paper or scissors? ")
+if computer_choice=="rock":
+    if player_choice=="rock":
+        print("Tie! you both select the same")
+    elif player_choice=="paper":
+        print("You win! the computer selects "+computer_choice)
+    else:
+        print("You lose! the computer selects "+computer_choice)
+if computer_choice=="paper":
+    if player_choice=="paper":
+        print("Tie! you both select the same")
+    elif player_choice=="rock":
+        print("You lose! the computer selects "+computer_choice)
+    else:
+        print("You win! the computer selects "+computer_choice)
+if computer_choice=="scissors":
+    if player_choice=="scissors":
+        print("Tie! you both select the same")
+    elif player_choice=="rock":
+        print("You win! the computer selects "+computer_choice)
+    else:
+        print("You lose! the computer selescts "+computer_choice)
