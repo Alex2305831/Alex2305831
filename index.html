@@ -1,22 +1,55 @@
 <!DOCTYPE html>
-<html>
-<body style="background-color: aqua;">
-<h1>My first program</h1>
-<p>Lets see what is happening</p>
-<form action="/http://127.0.0.1:5500/index.html">
-<label for fname="Fname">First Name</label>
-<input type="text"id="Fname"name="Fname"><br>
-<label for lname="Lname">Last Name</label>
-<input type="text"id="Lname"name="Lname"><br>
-<input type="Submit" value="Submit"><br>
-</form>
-<p id="demo"></p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Increase and Decrease Button</title>
+<style>
+h1{
+    color:azure;
+}
+p{
+    color:azure;
+}
+.value { font-size: 4rem; font-weight: 700; line-height:1; margin: 16px 0 24px; color:azure; }
+.buttons { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; color:beige; }
+.hint { margin-top:12px; color: var(--muted); font-size: .875rem; color:azure; }
+</style>
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+<h1 id="title">Counter:</h1>
+<div id="value" class="value" aria-live="polite">0</div>
+<div class="buttons">
+<button id="decrease" aria-label="Decrease by 1">Decrease by 1</button>
+<button id="reset" aria-label="Reset">Reset</button>
+<button id="increase" aria-label="Increase by 1">Increase by 1</button>
+<p class="hint">Hint: You can also press the buttons +,- and 0 in the keyboard to change the number</p>
+</div>
 <script>
-let x=6;
-let array=[1,2,3,4,5]
-array.push(x)
-document.getElementById("demo").innerHTML=array;
+let count=0;
+const value=document.getElementById("value");
+const increase=document.getElementById("increase");
+const reset=document.getElementById("reset");
+const decrease=document.getElementById("decrease");
+
+function render() {
+    value.textContent=count;
+}
+increase.addEventListener("click",()=>{
+    count+=1; render();
+});
+reset.addEventListener("click",()=>{
+    count=0; render();
+})
+decrease.addEventListener("click",()=>{
+    count-=1; render();
+})
+document.addEventListener("keydown",(e)=>{
+    if(e.key==="+"){count+=1;render();}
+    else if(e.key==="-"){count-=1;render();}
+    else if(e.key==="0"){count=0;render();}
+})
+render();
 </script>
-<button type="button" onclick="document.write(Math.floor(Math.random()*6)+1)">Press it</button>
 </body>
 </html>
