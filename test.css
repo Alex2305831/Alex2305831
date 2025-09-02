@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    color: blue;
+    enable-background: accumulate;
+}
+p{
+    text-align: center;
+    font-size: medium;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.hint{
+    font-style: oblique; 
+}
