@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://ckgjoa6pn4ifg"]
+
+[ext_resource type="Texture2D" uid="uid://dmoeb0h7plocj" path="res://Character/ControllerIcon.webp" id="1_ghhnu"]
+[ext_resource type="Script" path="res://rigid_body_2d.gd" id="1_xf4ut"]
+[ext_resource type="PackedScene" uid="uid://dinq67dy2rdg4" path="res://rigid_body_2d.tscn" id="3_broxi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bwhi3"]
+size = Vector2(71, 62)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2(506, 224)
+mass = 6.0
+gravity_scale = 0.0
+linear_damp = 1.0
+script = ExtResource("1_xf4ut")
+
+[node name="Character" type="Sprite2D" parent="RigidBody2D"]
+scale = Vector2(0.372222, 0.327778)
+texture = ExtResource("1_ghhnu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-0.5, 2)
+shape = SubResource("RectangleShape2D_bwhi3")
+
+[node name="RigidBody2D2" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(216, 90)
+
+[node name="RigidBody2D3" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(347, 311)
+
+[node name="RigidBody2D4" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(525, 386)
+
+[node name="RigidBody2D5" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(724, 330)
+
+[node name="RigidBody2D6" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(833, 173)
+
+[node name="RigidBody2D7" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(692, 177)
+
+[node name="RigidBody2D8" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(550, 101)
+
+[node name="RigidBody2D9" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(362, 50)
+
+[node name="RigidBody2D10" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(242, 196)
+
+[node name="RigidBody2D11" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(141, 321)
+
+[node name="RigidBody2D12" parent="." instance=ExtResource("3_broxi")]
+position = Vector2(273, 410)
