@@ -1,42 +1,40 @@
 import java.util.Scanner;
 public class Main{
-    static void myMethod(String txt){
-        System.out.println(txt.replaceAll("my","your"));
+    static void Method(String cars){
+        System.out.println("The best cars is "+cars);
     }
     public static void main(String[] args) {
-        myMethod("This is my text");
-        Scanner scan=new Scanner(System.in);
-        System.out.print("Please type your text again to solve something:");
-        String txt=scan.nextLine();
-        System.out.println(txt);
-        System.out.print("Type a random number to see his multiplication operation until 10:");
-        int x=scan.nextInt();
-        for (int i=1;i<=10;i++){
-            System.out.println(x+" * "+i+" = "+x*i);
+        try (Scanner scan = new Scanner(System.in)) {
+            int pin_code=1234;
+            int attempts=2;
+            System.out.print("Type your pin code to continue if its wrong type again:");
+            int user_type=scan.nextInt();
+            while(user_type!=pin_code){
+                attempts-=1;
+                System.out.print("Type again you have "+attempts+" attempts left:");
+                user_type=scan.nextInt();
+                if(attempts==0){
+                    System.out.print("Too bad you are out of attempts");
+                    break;
+                }
+            }
+            if(user_type==pin_code){
+                System.out.println("Great this is your pin code lets continue");
+                }
+        
+        String[] names=new String[4];
+        names[1]="Nick";
+        System.out.print(names[1]+" ");
+        System.out.println(names.length);
+        Method("Bmw"+", Mercedes "+"and Audi");
+        System.out.print("Type a number of rows:");
+        int rows=scan.nextInt();
+        for(int i=0;i<=rows;i++){
+            for(int j=0;j<=i;j++){
+                System.out.print("*");
+            }
+            System.out.print("\n");
         }
-        int y=(int)(Math.random()*11);
-        System.out.println(y);
-        switch (y){
-            case 0:
-               System.out.print("You lost you succeded 0");
-               break;
-            case 1:
-                System.out.print("You win you succeded 1");
-                break;
-            case 3:
-                System.out.print("You have 3 attempts because you succeded 3");
-                break;
-            case 5:
-                System.out.print("You succeded 5 so the program is success");
-                break;
-            case 7:
-                System.out.print("You are lucky because you succeded 7");
-                break;
-            case 10:
-                System.out.print("You succeded 10 so you are smart you are 10/10");
-                break;
-            default:
-                System.out.print("Number with no meaning");
-        }
+            }
     }
 }
