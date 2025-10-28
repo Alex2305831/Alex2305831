@@ -3,26 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Site</title>
+    <title>Exercieses</title>
 <link rel="stylesheet" href="Coding.css">
 </head>
-<nav>Start</nav>
 <body>
 <script src="Coding.js"></script>
-<h1>This is Heading</h1>
-<p>Below we have some links<br><br>
-<a href="https://github.com/">Github Link</a><br><br>
-<a href="https://www.skroutz.gr/">Skroutz Link</a><br><br>
-<button class="button"onclick="Func()">Button</button>
-</p>
-<form action="https://protonvpn.com/"><b>Sign in to this page (protonvpn)</b><br><br>
-<label for="username"><b>Username</b></label>
-<input type="text"id="username"name="username"placeholder="User"><br>
-<label for="password"><b>Password</b></label>
-<input type="password"id="password"name="password"><br>
-<input type="submit"value="Submit">
-<input type="reset"value="Reset">
+<form id="reservation_form">
+<label for="Full_Name">Full name*:</label><br>
+<input type="text"id="Full_Name"name="Full_Name"placeholder="FirstName LastName"><br>
+<label for="Email">Email address*:</label><br>
+<input type="text"id="Email"name="Email"placeholder="EMAIL_ADDRESS"><br>
+<label for="Tour">Select Tour Package*:</label><br>
+<select id="Tour">
+<option value="goa">Goa</option>
+<option value="kashmir">Kashmir</option>
+<option value="rajasthan">Rajasthan</option>
+</select><br>
+<label for="arrival_date">Arrival date*:</label><br>
+<input type="date"id="arrival_date"name="arrival_date"><br>
+<label for="persons">Number of persons*:</label><br>
+<input type="number"id="persons"name="persons"placeholder="UNKNOWN_TYPE"><br>
+<label for="avails">What would you want to avail?*</label><br>
+<input type="checkbox"id="avail1"name="avail1">
+<label for="avail1">Boarding</label><br>
+<input type="checkbox"id="avail2"name="avail2">
+<label for="avail2">Fooding</label><br>
+<input type="checkbox"id="avail3"name="avail3">
+<label for="avail3">Sight seeing</label><br>
+<label for="coupon">Discount Coupon code:</label><br>
+<input type="number"id="coupon"name="coupon"placeholder="UNKNOWN_TYPE"><br>
+<label for="trm">Terms and conditions*</label><br>
+<input type="radio"id="agree"name="agree">
+<label for="agree">I agree</label>
+<input type="radio"id="disagree"name="disagree">
+<label for="disagree">I disagree</label><br>
+<input type="submit"value="Complete reservation">
 </form>
-<footer>End</footer>
 </body>
 </html>
