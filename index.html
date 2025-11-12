@@ -3,53 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Increase and Decrease Button</title>
-<style>
-h1{
-    color:azure;
-}
-p{
-    color:azure;
-}
-.value { font-size: 4rem; font-weight: 700; line-height:1; margin: 16px 0 24px; color:azure; }
-.buttons { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; color:beige; }
-.hint { margin-top:12px; color: var(--muted); font-size: .875rem; color:azure; }
-</style>
+    <title>Homepage</title>
+    <img src="https://www.pngmart.com/files/21/Coffee-PNG-Transparent.png"width=200 height=150>
 </head>
-<body style="background-color: rgb(0, 0, 0);">
-<h1 id="title">Counter:</h1>
-<div id="value" class="value" aria-live="polite">0</div>
-<div class="buttons">
-<button id="decrease" aria-label="Decrease by 1">Decrease by 1</button>
-<button id="reset" aria-label="Reset">Reset</button>
-<button id="increase" aria-label="Increase by 1">Increase by 1</button>
-<p class="hint">Hint: You can also press the buttons +,- and 0 in the keyboard to change the number</p>
-</div>
-<script>
-let count=0;
-const value=document.getElementById("value");
-const increase=document.getElementById("increase");
-const reset=document.getElementById("reset");
-const decrease=document.getElementById("decrease");
-
-function render() {
-    value.textContent=count;
-}
-increase.addEventListener("click",()=>{
-    count+=1; render();
-});
-reset.addEventListener("click",()=>{
-    count=0; render();
-})
-decrease.addEventListener("click",()=>{
-    count-=1; render();
-})
-document.addEventListener("keydown",(e)=>{
-    if(e.key==="+"){count+=1;render();}
-    else if(e.key==="-"){count-=1;render();}
-    else if(e.key==="0"){count=0;render();}
-})
-render();
-</script>
+<body>
+<h2>Coffee Junkie</h2>
+<ul>
+<li>
+<a href="index.html">Homepage</a>
+</li>
+<li>
+<a href="about.html">About us</a>
+</li>
+<li>
+<a href="numbers.html">Numbers</a>
+</li>
+<li>
+<a href="contact.html">Contact us</a>
+</li>
+</ul>
+<img src="https://images.pexels.com/photos/4109748/pexels-photo-4109748.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"width=700 height=500>
+<h2>Featured Products</h2>
+<h3>House Blend Coffee</h3>
+<img src="https://cdn.pixabay.com/photo/2016/11/21/13/09/caffeine-1845314_640.jpg"width=280>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur nemo temporibus optio necessitatibus sunt aut impedit molestias perferendis. Explicabo veritatis ipsam totam reprehenderit ea eius vero quia et non cupiditate!</p>
+<a href="https://en.wikipedia.org/wiki/Coffee"><u>Details</u></a>
+<h3>French Roast</h3>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Miele%2C_IFA_2018%2C_Berlin_%28P1070083%29.jpg/800px-Miele%2C_IFA_2018%2C_Berlin_%28P1070083%29.jpg"width=280 height=290>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe dolor molestiae omnis officiis repudiandae quidem enim non fuga recusandae magni. Nihil, autem! Tempore sed, voluptatem aut necessitatibus in assumenda dolores.</p>
+<a href="https://en.wikipedia.org/wiki/Coffee_roasting"><u>Details</u></a>
+<h3>Columbian Roast</h3>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Bogota%27s_best_coffee._IMG_5865._png.jpg/800px-Bogota%27s_best_coffee._IMG_5865._png.jpg"width=250 height=290>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita quae quis officiis error est explicabo, reiciendis inventore odit sit maiores iusto laboriosam possimus atque quam eligendi excepturi vel! Minima, dolore.</p>
+<a href="https://en.wikipedia.org/wiki/Coffee_production_in_Colombia"><u>Details</u></a>
+<br>
+<br>
+<br>
+<br>
+<p>copyright&copy;2025</p>
+<a href="#">Back to Top</a>
 </body>
 </html>
